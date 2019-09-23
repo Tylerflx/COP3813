@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Macro Calculator </title>
+  </head>
+  <body>
+    <h1>Macronutrient Calculator</h1>
+    <h3>For Weight Loss</h3>
+    <div>
+      <h3>Step 1: Input Data</h3>
+      <p>All Field Required</p>
+      <label>Enter Your Weight<input type="text" id="weight" required>lbs</label><br>
+      <label>Enter Your Height<input type="text" id="heightInFoot" required>Foot <input type="text" id="heightInInches" required> Inches</label><br>
+      <label>Enter Your Age</label><input type="text" id="age" required><br>
+      <label>Enter Your Activity Level</label><input type="text" id="level" value="1.2" required>
+    </div>
+
+    <div>
+      <p>
+          Activity Levels are:<br>
+          1.2 = Sedentary (Desk job, and Little Formal Exercise)<br>
+          1.3 = Lightly Active (Light daily activity AND light exercise 1-3 days a week)<br>
+          1.5 = Moderately Active (Moderately daily Activity & Moderate/hard exercise 4-5 days a week)<br>
+          1.7 = Very Active (Physically demanding lifestyle & Hard exercise 6-7 days a week)1.3<br>
+          1.9 = Extremely Active (Athlete in ENDURANCE training or VERY HARD physical job)
+
+      </p>
+    </div>
+
+    <div>
+        <button id="submit" onclick="calculate()">Calculate</button>
+        <button id="clear" onclick="clr()">Clear</button>
+   </div>
+    
+    <div>
+        <label>BMR: </label><input type="text" id="BMRresult"><br>
+        <label>Daily Calorie Requirement (DCR): <input type="text" id="DCRresult"></label><br>
+        <label>Calorie Deficit: </label><input type="text" id="calorieDef"><br>
+        <label>Caloric Goal For Fat Loss on Low-Carb Day: </label><input type="text" id="LowCarbresult"><br>
+        <label>Caloric Goal For Fat Loss on High-Carb Day: </label><input type="text" id="HighCarbresult"><br>
+    </div>
+
+    <div>
+      <table>
+        <tr>
+          <th>Daily Macronutrient Values</th>
+          <th>Fat</th>
+          <th>Carbs</th>
+          <th>Protein</th>
+          <th>Total Calories</th>
+        </tr>
+        <tr>
+          <td>Low-Carb Day</td>
+        </tr>
+        <tr>
+          <td>High-Carb Day</td>
+        </tr>
+
+      </table>
+    </div>
+  
+    <script src="p3/macrocalculator.js"></script>
+  </body>
+</html>
