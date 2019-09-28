@@ -15,7 +15,7 @@ function calculate(){
         document.getElementById("BMRresult").value = parseInt(BMR);
     }
     else{
-        alert("Invalid Input, Try Again");
+        alert("Invalid Input");
     }
     if(!isNaN(BMR)){
         var DCR = getActivity * BMR;
@@ -32,21 +32,38 @@ function calculate(){
     else{
         return;
     }
+	
+	//calculate fat, carb, protein and total calorie
+	 var fLow = lowCb * 0.25;
+	 var cLow = lowCb * 0.4;
+	 var pLow = lowCb * 0.35;
+	 var fHigh = highCb * 0.25;
+	 var cHigh = highCb * 0.4;
+	 var pHigh = highCb * 0.35;
+	document.getElementById("fatLow").innerHTML = parseFloat(fLow).toFixed(1);
+	document.getElementById("carbLow").innerHTML = parseFloat(cLow).toFixed(1);
+	document.getElementById("proteinLow").innerHTML = parseFloat(pLow).toFixed(1);
+	document.getElementById("totalCalLow").innerHTML = (fLow + cLow + pLow).toFixed(1);
+	document.getElementById("fatHigh").innerHTML = parseFloat(fHigh).toFixed(1);;
+	document.getElementById("carbHigh").innerHTML = parseFloat(cHigh).toFixed(1);;
+	document.getElementById("proteinHigh").innerHTML = parseFloat(pHigh).toFixed(1);;
+	document.getElementById("totalCalHigh").innerHTML = (fHigh + cHigh + pHigh).toFixed(1);
 }
 
 function clr(){
     //clear every text box to blank
-    document.getElementById("BMRresult").value =" ";
-    document.getElementById("DCRresult").value =" ";
-    document.getElementById("calorieDef").value = " ";
-    document.getElementById("LowCarbresult").value = " ";
-    document.getElementById("HighCarbresult").value = " ";
+	//Output Boxes
+    document.getElementById("BMRresult").value ="";
+    document.getElementById("DCRresult").value ="";
+    document.getElementById("calorieDef").value = "";
+    document.getElementById("LowCarbresult").value = "";
+    document.getElementById("HighCarbresult").value = "";
     //Input boxes
     document.getElementById("weight").value ="";
     document.getElementById("heightInFoot").value = "";
     document.getElementById("heightInInches").value = "";
     document.getElementById("age").value = "";
     document.getElementById("result").value = "";
-    //Output Boxes
+    
 
 }
